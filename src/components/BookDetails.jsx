@@ -28,6 +28,9 @@ const {id} = useParams();
     <p>{book?.description}</p>
     <h2>Authors</h2>
     <p>{book?.authors}</p>
+    <h2>Genres</h2>
+    <p>{book?.genres}</p>
+
     </div>    
   </div>
   )
