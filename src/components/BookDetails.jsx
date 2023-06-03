@@ -21,16 +21,18 @@ const {id} = useParams();
   return (<div className='book-details'>  
   <div className='book-image'>
   <h2>{book?.title}</h2>
-<img src={book.image_url} alt="#" />
+<img src={book?.image_url} alt="#" />
   </div>
   <div className='book-info'>
-    <h2>Description</h2>
-    <p>{book?.description}</p>
-    <h2>Authors</h2>
+  <h2 className='des'>Description</h2>
+    <p >{book?.description}</p>
+    <div><h3>Authors</h3>
     <p>{book?.authors}</p>
-    <h2>Genres</h2>
+    <h3>Genres</h3>
     <p>{book?.genres}</p>
-
+    <h3>Number of Paiges</h3>
+    <p> {book?.num_pages}</p>
+    </div>
     </div>    
   </div>
   )

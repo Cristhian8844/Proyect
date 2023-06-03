@@ -3,7 +3,6 @@ import '../App' ;
 import { API_URL } from '../API';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-//import { useAppContext } from './context/appContext';
 
 const BookList = () => {
    const [books,setBooks ]= useState([]);
@@ -24,8 +23,8 @@ const BookList = () => {
   return (<div className='book-list'>
       {books.map((book) => (
         <div key={book.id} className='book'>
-                <div><h4>{book.title}</h4></div>
-                <div><img src={book.image_url} alt='#' onClick={()=>navigate(`/book/${book.id}`)}/></div>
+                <div className='title'><h4>{book.title}</h4></div>
+                <div className='book-image1'><img src={book.image_url} alt='#' onClick={()=>navigate(`/book/${book.id}`)}/></div>
 
       </div> ))}
       </div>
